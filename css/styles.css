@@ -43,7 +43,17 @@ img {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--logo-first-cl);
+    padding: 24px 0;
+}
+@media only screen and (min-width: 768px) {
+  .logo {
+    margin-right: 120px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+    .logo {
     margin-right: 76px;
+    }
 }
 .logo-text {
     color: var(--logo-second-cl);
@@ -73,6 +83,11 @@ img {
     display: flex;
     gap: 40px;
 }
+@media only screen and (max-width: 767px) {
+  .header-nav-list {
+    display: none;
+  }
+}
 .header-nav-item {
     position: relative;
 }
@@ -80,6 +95,11 @@ img {
     font-style: normal;
     color: var(--main-txt-cl);
     margin-left: auto;
+}
+@media only screen and (max-width: 767px) {
+  .contacts-address {
+    display: none;
+  }
 }
 .contacts-list {
     display: flex;
@@ -792,4 +812,97 @@ img {
   .ghosts {
     display: block;
   }
+}
+.menu-toggle {
+    min-height: 40px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    margin-left: auto;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+}
+
+@media (min-width: 768px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100vw;
+    height: 100vh;
+    padding: 80px 35px 40px 40px;
+    background-color: #fff;
+    z-index: 999;
+
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+    transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+.mobile-menu {
+    margin-bottom: auto;
+}
+.mobile-menu .link {
+    display: block;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    padding-bottom: 40px;
+    color: var(--logo-second-cl);
+    text-decoration: none;
+}
+.mobile-socials {
+    justify-content: flex-start;
+    gap: 56px;
+}
+.mobile-contacts {
+    margin-bottom: 48px;
+}
+.mobile-link.active {
+    color: var(--accent-txt-cl);
+}
+.contacts-tel {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: var(--logo-first-cl);
+}
+.contacts-mail {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--main-txt-cl);
 }
