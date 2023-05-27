@@ -43,7 +43,7 @@ img {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--logo-first-cl);
-    padding: 24px 0;
+    
 }
 @media only screen and (min-width: 768px) {
   .logo {
@@ -500,9 +500,12 @@ img {
 }
 .footer {
     background-color: var(--logo-second-cl);
-    height: 664px;
     padding: 96px 0;
-    /* padding: 100px 0; */
+}
+@media only screen and (min-width: 1158px) {
+  .footer {
+    padding: 100px 0;
+  }
 }
 .logo-ftr {
     display: inline-block;
@@ -534,7 +537,11 @@ img {
 }
 .footer-desc {
     display: block;
+    text-align: left;
+    margin: 0 auto;
     width: 264px;
+    font-weight: 400;
+    font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #F4F4FD; 
@@ -552,18 +559,50 @@ img {
 }
 .footer-socials {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 16px;
 }
 .footer-container {
+    text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .footer-container {
     display: flex;
+    text-align: left;
     align-items: baseline;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+  .footer-container {
+    flex-wrap: wrap;
+    max-width: 582px;
+  }
 }
 .logo-container {
+    text-align: center;
+    margin-bottom: 72px;
+}
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+   .logo-container {
+    margin-right: 24px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .logo-container {
     margin-right: 120px;
+    margin-bottom: 0;
+    text-align: left;
+  }
 }
 .social-container {
+    margin-bottom: 72px;
+}
+@media only screen and (min-width: 1158px) {
+  .social-container {
     margin-right: 80px;
+    margin-bottom: 0;
+  }
 }
 .social-link-footer {
     transition: background-color var(--anim);
@@ -807,9 +846,23 @@ img {
 .form-check-input:checked + .form-icon-check > .checked {
     opacity: 1;
 }
+.container-form {
+    text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .container-form {
+    text-align: left;
+  }
+}
 .footer-form {
+    /* display: flex;
+    gap: 24px; */
+}
+@media only screen and (min-width: 768px) {
+  .footer-form {
     display: flex;
     gap: 24px;
+  }
 }
 .footer-form-title {
     font-weight: 500;
@@ -832,6 +885,7 @@ img {
     outline: transparent;
     border-radius: 4px;
     color: #fff;
+    margin-bottom: 16px;
     padding-left: 16px;
 }
 .footer-form-tag {
@@ -871,6 +925,7 @@ img {
     border-radius: 4px;
     border: none;
     cursor: pointer;
+    margin: 0 auto;
     transition: background-color var(--anim);
 }
 .footer-form-btn:hover,
