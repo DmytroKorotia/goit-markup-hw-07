@@ -55,6 +55,9 @@ img {
     margin-right: 76px;
     }
 }
+.logo-header {
+  padding:24px 0;
+}
 .logo-text {
     color: var(--logo-second-cl);
 }
@@ -597,7 +600,6 @@ img {
   }
 }
 .logo-container {
-    text-align: center;
     margin-bottom: 72px;
 }
 @media only screen and (min-width: 768px) and (max-width: 1157px) {
@@ -1040,7 +1042,7 @@ img {
     justify-content: flex-start;
     gap: 56px;
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 427px) {
   .mobile-socials {
     gap: 16px;
   }
@@ -1078,4 +1080,7 @@ img {
   .container-appearance {
     width: 100%;
   }
+}
+.form-icon-check {
+  flex-shrink: 0;
 }
